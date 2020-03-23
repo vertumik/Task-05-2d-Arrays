@@ -11,12 +11,13 @@ public class Task18 {
 		if (n % 2 == 0) {
 		for (int i = 0; i < array.length; i++) {
 			for (int j = 0; j < array.length; j++) {
-				array[i][j] = i+1;
+				if (i + j <= n-1) {
+					array[i][j] = i+1;
+				}else {
+					array[i][j] = 0;
+				}
 			}
 		}
-		
-		
-		
 		
 		for (int i = 0; i < array.length; i++) {
 			for (int j = 0; j < array.length; j++) {
