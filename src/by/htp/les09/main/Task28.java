@@ -13,7 +13,6 @@ public class Task28 {
 		int n = 4;
 		int[][] array = new int[m+1][n];
 		Random rand = new Random();
-		int sum = 0;
 		
 		for (int i = 0; i < m; i++) {
 			for (int j = 0; j < n; j++) {
@@ -21,12 +20,19 @@ public class Task28 {
 			}
 		}
 		
+		int max = 0;
 		for (int j = 0; j < n; j++) {
+			int sum = 0;
 			for (int i = 0; i < m; i++) {
 				sum = sum + array[i][j];
 				array[m][j] = sum;
+				if (array[m][j] > max) {
+					max = array[m][j];
+				}
 			}
 		}
+		System.out.println("Максимальная сумма в столбце: " + max);
+		System.out.println();
 		
 		for (int i = 0; i <= m; i++) {
 			for (int j = 0; j < n; j++) {
@@ -34,6 +40,7 @@ public class Task28 {
 			}
 			System.out.println();
 		}
+		
 
 	}
 

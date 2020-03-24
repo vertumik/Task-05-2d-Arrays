@@ -17,9 +17,9 @@ public class Task08 {
 		for (int i = 0 ; i < m; i++){
 			for (int j = 0 ; j < n; j++){	
 			array[i][j] = rand.nextInt(10);
-			if (array[i][j] == 7) {
-				count++;
-			}
+				if (array[i][j] == 7) {
+					count++;
+				}
 			}
 		}
 		System.out.println(count);
